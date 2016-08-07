@@ -6,6 +6,10 @@ The **ultimate** person randomizer.
 
 Have you ever wondered how many programming buzz words can be squeezed into a single side project? We're about to see. 
 
+## Endpoints
+
+TBD
+
 ## Version History
 
 #### v0.1.4
