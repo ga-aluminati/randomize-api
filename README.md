@@ -1,21 +1,25 @@
-# Lumen PHP Framework
+# Randomize API
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[https://randomize.co](https://randomize.co)
+[https://api.randomize.co](https://api.randomize.co)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+The **ultimate** person randomizer. 
 
-## Official Documentation
+Have you ever wondered how many programming buzz words can be squeezed into a single side project? We're about to see. 
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+## Version History
 
-## Security Vulnerabilities
+#### v0.1.0
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- Set up domain, host and SSL 
+- Set up Git repo
+- Initialized Lumen framework
+- Set up Git web hooks for deployment to production
 
-## License
+## Technologies
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+* [Lumen PHP Framework](https://lumen.laravel.com/)
+* [MySQL](https://www.mysql.com/)
+* [Eloquent ORM](https://laravel.com/docs/5.0/eloquent)
+* [Auth0](https://auth0.com/)
+* [Socket.IO](http://socket.io/)
