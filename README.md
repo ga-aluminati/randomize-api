@@ -1,6 +1,5 @@
 # Randomize API
 
-[https://randomize.co](https://randomize.co)
 [https://api.randomize.co](https://api.randomize.co)
 
 The **ultimate** person randomizer. 
