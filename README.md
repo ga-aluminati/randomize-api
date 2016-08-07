@@ -8,6 +8,25 @@ Have you ever wondered how many programming buzz words can be squeezed into a si
 
 ## Version History
 
+#### v0.1.4
+
+- Create routes
+
+#### v0.1.3
+
+- Integrate Auth0 to lock down API endpoints
+
+#### v0.1.2
+
+- Create and run migrations to build database tables
+
+#### v0.1.1
+
+- Determine API endpoints required
+- Create ERD for tables and relationships
+- Set up development database
+- Set up production database
+
 #### v0.1.0
 
 - Set up domain, host and SSL 
