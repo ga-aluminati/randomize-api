@@ -4,7 +4,7 @@
 
 The **ultimate** person randomizer. 
 
-Have you ever wondered how many programming buzz words can be squeezed into a single side project? We're about to see. 
+This project does not put into practice [TDD](https://en.wikipedia.org/wiki/Test-driven_development), but it does have plenty of **FDD** (Fad Driven Development). Have you ever wondered how many technologies can be successfully squeezed into a single side project? We're about to find out. 
 
 ## Endpoints
 
@@ -45,3 +45,4 @@ TBD
 * [Eloquent ORM](https://laravel.com/docs/5.0/eloquent)
 * [Auth0](https://auth0.com/)
 * [Socket.IO](http://socket.io/)
+* [Vagrant](https://www.vagrantup.com/)
