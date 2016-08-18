@@ -10,6 +10,12 @@ This project does not put into practice [TDD](https://en.wikipedia.org/wiki/Test
 
 TBD
 
+## ERD 
+
+
+
+Source: https://www.draw.io 
+
 ## Version History
 
 #### v0.1.4
