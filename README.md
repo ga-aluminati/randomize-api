@@ -12,7 +12,7 @@ TBD
 
 ## ERD 
 
-![ERD](./Randomize_ERD.svg?raw=true)
+![ERD](https://raw.github.com/ga-aluminati/randomize-api/master/Randomize_ERD.svg)
 
 Source: https://www.draw.io 
 
