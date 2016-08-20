@@ -12,7 +12,7 @@ TBD
 
 ## ERD 
 
-
+![ERD](./Randomize_ERD.svg)
 
 Source: https://www.draw.io 
 
