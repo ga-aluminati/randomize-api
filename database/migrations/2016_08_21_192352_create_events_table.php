@@ -26,7 +26,7 @@ class CreateEventsTable extends Migration
           $table->boolean('private')->default(false);
           $table->char('secret', 40)->nullable();
           $table->string('display_code')->unique()->nullable();
-          $table->char('event_type_code', 3)->default('GRP');
+          $table->char('event_type_code', 3)->default('RDM');
           $table->char('event_status_code', 3)->default('PND');
 
           // Metadata
