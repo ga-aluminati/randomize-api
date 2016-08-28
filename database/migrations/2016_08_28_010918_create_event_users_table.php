@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGroupUsersTable extends Migration
+class CreateEventUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,26 +12,26 @@ class CreateGroupUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('group_users', function (Blueprint $table) {
+        Schema::create('event_users', function (Blueprint $table) {
           // Primary key
+          $table->integer('event_id')->unsigned();
           $table->integer('user_id')->unsigned();
-          $table->integer('group_id')->unsigned();
 
-          $table->primary(['user_id', 'group_id']);
+          $table->primary(['event_id', 'user_id']);
 
           // Table columns
-          $table->integer('match_id')->unsigned()->nullable();
-          $table->char('group_status_code', 3)->default('ACT');
+          $table->smallInteger('display_seq')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);
+          $table->integer('removed_by')->unsigned()->nullable();
+          $table->dateTimeTz('removed_at')->nullable();
           $table->timestamps();
 
           // Foreign keys
+          $table->foreign('event_id')->references('id')->on('events');
           $table->foreign('user_id')->references('id')->on('users');
-          $table->foreign('group_id')->references('id')->on('groups');
-          $table->foreign('match_id')->references('id')->on('users');
-          $table->foreign('group_status_code')->references('code')->on('group_statuses');
+          $table->foreign('removed_by')->references('id')->on('users');
         });
     }
 
@@ -42,6 +42,6 @@ class CreateGroupUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('group_users');
+        Schema::drop('event_users');
     }
 }

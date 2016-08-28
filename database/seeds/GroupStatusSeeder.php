@@ -2,11 +2,11 @@
 
 use Illuminate\Database\Seeder;
 
-class RelationshipTypeTableSeeder extends Seeder
+class GroupStatusTableSeeder extends Seeder
 {
     public function run()
     {
-      DB::table('relationship_types')->insert(
+      DB::table('group_statuses')->insert(
           array(
               'code' => 'ACT',
               'name' => 'Active Match',
@@ -15,11 +15,11 @@ class RelationshipTypeTableSeeder extends Seeder
           )
       );
 
-      DB::table('relationship_types')->insert(
+      DB::table('group_statuses')->insert(
           array(
               'code' => 'HIS',
               'name' => 'Historical Match',
-              'desc' => 'User was previously matched to this group but event organizer redrew',
+              'desc' => 'User was previously matched to this group but an event admin redrew',
               'updated_by' => 'lumen_seeder'
           )
       );

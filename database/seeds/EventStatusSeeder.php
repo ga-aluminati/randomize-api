@@ -28,7 +28,16 @@ class EventStatusTableSeeder extends Seeder
           array(
               'code' => 'CLS',
               'name' => 'Closed Event',
-              'desc' => 'Event is closed',
+              'desc' => 'With Secret Santa, a closed event reveals all the matches on the page',
+              'updated_by' => 'lumen_seeder'
+          )
+      );
+
+      DB::table('event_statuses')->insert(
+          array(
+              'code' => 'REM',
+              'name' => 'Removed Event',
+              'desc' => 'Event has been removed by an admin',
               'updated_by' => 'lumen_seeder'
           )
       );

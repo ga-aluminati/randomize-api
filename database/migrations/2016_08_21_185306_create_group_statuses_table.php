@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRelationshipTypesTable extends Migration
+class CreateGroupStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateRelationshipTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('relationship_types', function (Blueprint $table) {
+        Schema::create('group_statuses', function (Blueprint $table) {
           // Primary key
           $table->char('code', 3);
           $table->primary('code');
@@ -36,6 +36,6 @@ class CreateRelationshipTypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('relationship_types');
+        Schema::drop('group_statuses');
     }
 }

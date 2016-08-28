@@ -10,7 +10,7 @@ class EventTypeTableSeeder extends Seeder
           array(
               'code' => 'RDM',
               'name' => 'Random Order',
-              'desc' => 'All participants are arranged in random order',
+              'desc' => 'All users are arranged in random order',
               'updated_by' => 'lumen_seeder'
           )
       );
