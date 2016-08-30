@@ -12,7 +12,7 @@ TBD
 
 ## ERD 
 
-![ERD](./Randomize_ERD-20160829.png?raw=true)
+![ERD](./Randomize_ERD-20160830.png?raw=true&new)
 
 Source: https://www.draw.io 
 
