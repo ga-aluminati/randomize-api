@@ -20,7 +20,6 @@ class CreateParticipantsTable extends Migration
           $table->integer('event_id')->unsigned();
           $table->integer('user_id')->unsigned()->nullable();
           $table->string('display_name');
-          $table->smallInteger('display_seq')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);

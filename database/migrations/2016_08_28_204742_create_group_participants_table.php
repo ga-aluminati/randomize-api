@@ -21,6 +21,7 @@ class CreateGroupParticipantsTable extends Migration
 
           // Table columns
           $table->integer('match_id')->unsigned()->nullable();
+          $table->smallInteger('display_seq')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);
@@ -28,8 +29,8 @@ class CreateGroupParticipantsTable extends Migration
 
           // Foreign keys
           $table->foreign('participant_id')->references('id')->on('participants');
+          $table->foreign('match_id')->references('id')->on('participants');
           $table->foreign('group_id')->references('id')->on('groups');
-          $table->foreign('match_id')->references('id')->on('users');
         });
     }
 
