@@ -28,12 +28,10 @@ class CreateUsersTable extends Migration
 
             // Metadata
             $table->string('updated_by', 100);
-            $table->integer('added_by')->unsigned()->nullable();
             $table->dateTimeTz('logged_in_at')->nullable();
             $table->timestamps();
 
             // Foreign keys
-            $table->foreign('added_by')->references('id')->on('users');
         });
     }
 

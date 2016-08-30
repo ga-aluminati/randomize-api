@@ -23,7 +23,6 @@ class CreateEventsTable extends Migration
           $table->dateTimeTz('start_at')->nullable();
           $table->dateTimeTz('end_at')->nullable();
           $table->dateTimeTz('auto_draw_at')->nullable();
-          // $table->dateTimeTz('drawn_at')->nullable();
           $table->boolean('private')->default(false);
           $table->char('secret', 40)->nullable();
           $table->string('display_code')->unique()->nullable();

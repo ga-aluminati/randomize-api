@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventGroupsTable extends Migration
+class CreateGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,22 +12,21 @@ class CreateEventGroupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_groups', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
           // Primary key
-          $table->integer('event_id')->unsigned();
-          $table->integer('group_id')->unsigned();
-
-          $table->primary(['event_id', 'group_id']);
+          $table->increments('id');
 
           // Table columns
+          $table->integer('drawing_id')->unsigned();
+          $table->string('name', 100)->nullable();
+          $table->mediumText('desc')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);
           $table->timestamps();
 
           // Foreign keys
-          $table->foreign('event_id')->references('id')->on('events');
-          $table->foreign('group_id')->references('id')->on('groups');
+          $table->foreign('drawing_id')->references('id')->on('drawings');
         });
     }
 
@@ -38,6 +37,6 @@ class CreateEventGroupsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event_groups');
+        Schema::drop('groups');
     }
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventUsersTable extends Migration
+class CreateParticipantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,18 +12,19 @@ class CreateEventUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_users', function (Blueprint $table) {
+        Schema::create('participants', function (Blueprint $table) {
           // Primary key
-          $table->integer('event_id')->unsigned();
-          $table->integer('user_id')->unsigned();
-
-          $table->primary(['event_id', 'user_id']);
+          $table->increments('id');
 
           // Table columns
+          $table->integer('event_id')->unsigned();
+          $table->integer('user_id')->unsigned()->nullable();
+          $table->string('display_name');
           $table->smallInteger('display_seq')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);
+          $table->integer('added_by')->unsigned()->nullable();
           $table->integer('removed_by')->unsigned()->nullable();
           $table->dateTimeTz('removed_at')->nullable();
           $table->timestamps();
@@ -31,6 +32,7 @@ class CreateEventUsersTable extends Migration
           // Foreign keys
           $table->foreign('event_id')->references('id')->on('events');
           $table->foreign('user_id')->references('id')->on('users');
+          $table->foreign('added_by')->references('id')->on('users');
           $table->foreign('removed_by')->references('id')->on('users');
         });
     }
@@ -42,6 +44,6 @@ class CreateEventUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event_users');
+        Schema::drop('participants');
     }
 }

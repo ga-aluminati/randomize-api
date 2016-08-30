@@ -12,7 +12,8 @@ class UserTableSeeder extends Seeder
               'nickname' => 'johndoe',
               'given_name' => 'John',
               'family_name' => 'Doe',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -22,7 +23,8 @@ class UserTableSeeder extends Seeder
               'nickname' => 'janedoe',
               'given_name' => 'Jane',
               'family_name' => 'Doe',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
     }

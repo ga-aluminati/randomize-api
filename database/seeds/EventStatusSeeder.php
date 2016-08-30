@@ -11,7 +11,8 @@ class EventStatusTableSeeder extends Seeder
               'code' => 'PND',
               'name' => 'Pending Event',
               'desc' => 'Waiting for guests to join',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -20,7 +21,8 @@ class EventStatusTableSeeder extends Seeder
               'code' => 'DRW',
               'name' => 'Matches Drawn',
               'desc' => 'Drawing has taken place',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -29,7 +31,8 @@ class EventStatusTableSeeder extends Seeder
               'code' => 'CLS',
               'name' => 'Closed Event',
               'desc' => 'With Secret Santa, a closed event reveals all the matches on the page',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -38,7 +41,8 @@ class EventStatusTableSeeder extends Seeder
               'code' => 'REM',
               'name' => 'Removed Event',
               'desc' => 'Event has been removed by an admin',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
     }

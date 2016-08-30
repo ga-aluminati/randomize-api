@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEventDrawsTable extends Migration
+class CreateDrawingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,13 +12,17 @@ class CreateEventDrawsTable extends Migration
      */
     public function up()
     {
-        Schema::create('event_draws', function (Blueprint $table) {
+        Schema::create('drawings', function (Blueprint $table) {
           // Primary key
           $table->increments('id');
 
           // Table columns
           $table->integer('event_id')->unsigned();
           $table->integer('drawn_by')->unsigned();
+          $table->char('drawing_status_code', 3)->default('ACT');
+          $table->char('event_type_code', 3);
+          $table->char('sort_priority_code', 3)->nullable();
+          $table->smallInteger('sort_priority_num')->nullable();
 
           // Metadata
           $table->string('updated_by', 100);
@@ -27,6 +31,9 @@ class CreateEventDrawsTable extends Migration
           // Foreign keys
           $table->foreign('event_id')->references('id')->on('events');
           $table->foreign('drawn_by')->references('id')->on('users');
+          $table->foreign('drawing_status_code')->references('code')->on('drawing_statuses');
+          $table->foreign('event_type_code')->references('code')->on('event_types');
+          $table->foreign('sort_priority_code')->references('code')->on('sort_priorities');
         });
     }
 
@@ -37,6 +44,6 @@ class CreateEventDrawsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('event_draws');
+        Schema::drop('drawings');
     }
 }

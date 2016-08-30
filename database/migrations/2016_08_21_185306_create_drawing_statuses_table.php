@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGroupStatusesTable extends Migration
+class CreateDrawingStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateGroupStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('group_statuses', function (Blueprint $table) {
+        Schema::create('drawing_statuses', function (Blueprint $table) {
           // Primary key
           $table->char('code', 3);
           $table->primary('code');
@@ -36,6 +36,6 @@ class CreateGroupStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('group_statuses');
+        Schema::drop('drawing_statuses');
     }
 }

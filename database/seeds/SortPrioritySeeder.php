@@ -10,8 +10,9 @@ class SortPriorityTableSeeder extends Seeder
           array(
               'code' => 'GRP',
               'name' => 'Group Priority',
-              'desc' => 'Determine best way to randomize based on number of groups requested',
-              'updated_by' => 'lumen_seeder'
+              'desc' => 'Determine best way to randomize based on number of total groups',
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -20,7 +21,8 @@ class SortPriorityTableSeeder extends Seeder
               'code' => 'IND',
               'name' => 'Individual Priority',
               'desc' => 'Determine best way to randomize based on number of people per group',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 

@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call('EventStatusTableSeeder');
         $this->call('EventTypeTableSeeder');
-        $this->call('GroupStatusTableSeeder');
+        $this->call('DrawingStatusTableSeeder');
         $this->call('SortPriorityTableSeeder');
 
         // $this->call('UserTableSeeder');

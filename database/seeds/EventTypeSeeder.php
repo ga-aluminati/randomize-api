@@ -11,7 +11,8 @@ class EventTypeTableSeeder extends Seeder
               'code' => 'RDM',
               'name' => 'Random Order',
               'desc' => 'All users are arranged in random order',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -20,7 +21,8 @@ class EventTypeTableSeeder extends Seeder
               'code' => 'GRP',
               'name' => 'Group Event',
               'desc' => 'Users are matched into groups of 2 or more',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
 
@@ -29,7 +31,8 @@ class EventTypeTableSeeder extends Seeder
               'code' => 'SEC',
               'name' => 'Secret Santa',
               'desc' => 'Users are matched into pairs, matches are hidden from everyone else until the event is closed',
-              'updated_by' => 'lumen_seeder'
+              'updated_by' => 'lumen_seeder',
+              'created_at' => date('Y-m-d G:i:s')
           )
       );
     }
